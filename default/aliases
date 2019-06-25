@@ -1,0 +1,9 @@
+alias s="bundle exec rails s"
+alias c="bundle exec rails c"
+alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+alias ffs="rm -f tmp/fixture_builder.yml && rm -rf spec/fixtures && mkdir spec/fixtures && touch spec/fixtures/.gitkeep && bin/rake db:ffs"
+alias tail_test="tail -f $HOME/workspace/hired/log/test.log"
+alias tail_dev="tail -f $HOME/workspace/hired/log/development.log"
+alias bundle_up="bundle && yarn && rails db:migrate && rails db:test:prepare"
+
+
