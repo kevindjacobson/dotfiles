@@ -1,0 +1,44 @@
+# Load antigen base
+source /usr/local/share/antigen/antigen.zsh
+source "${HOME}/.iterm2_shell_integration.zsh"
+source $HOME/.aliases
+source $HOME/.paths
+source $HOME/.powerline
+source $HOME/.setup_nvm
+
+TERM=xterm-256color
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# NON-ANTIGEN PLUGINS
+# rbenv
+eval "$(rbenv init -)"
+# hub
+eval "$(hub alias -s)"
+# direnv
+eval "$(direnv hook zsh)"
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle lukechilds/zsh-nvm
+antigen bundle pip
+antigen bundle virtualenv
+antigen bundle pyenv
+antigen bundle colored-man-pages
+antigen bundle vscode
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle jocelynmallon/zshmarks
+antigen bundle zsh-users/zsh-completions
+
+# Load the theme.
+antigen theme bhilburn/powerlevel9k powerlevel9k
+
+# Tell Antigen that you're done.
+antigen apply
+
+# Cleanup
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
