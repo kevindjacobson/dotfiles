@@ -15,4 +15,4 @@ I only have one configuration, `default`, which can be linked to one's home dire
 bashdot install default
 ```
 
-See (bashdot's documentation)[https://github.com/bashdot/bashdot] for more information
+See https://github.com/bashdot/bashdot for more information
